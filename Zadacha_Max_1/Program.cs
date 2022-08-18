@@ -5,9 +5,9 @@ int numberB = Convert.ToInt32(Console.ReadLine());
 
 if(numberA > numberB)
 {
-    Console.WriteLine(numberA + " является большим (максимальным) из двух чисел");
+    Console.WriteLine("max = " + numberA + " (является большим из двух чисел)");
 }
 else
 {
-    Console.WriteLine(numberB + " является большим (максимальным) из двух чисел");
+    Console.WriteLine("max = " + numberB + " (является большим из двух чисел)");
 }
