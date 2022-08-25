@@ -1,7 +1,9 @@
-﻿// На вход пятизначное. Проверка на полиндром.
+﻿
+// На вход пятизначное. Проверка на полиндром.
 // 12821 - да
-
-Console.Write("Введите пятизначное число: ");
+void Polindrom()
+{
+  Console.Write("Введите пятизначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 if (number > 9999 && number < 100000) {
@@ -14,3 +16,6 @@ if (number > 9999 && number < 100000) {
 } else {
     Console.WriteLine("Это не пятизначное число, попробуйте снова");
 }
+}
+
+Polindrom();
