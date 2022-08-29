@@ -85,7 +85,7 @@ int count2 = Convert.ToInt32(Console.ReadLine());
 int[] array2 = new int[count2];
 FillMas(array2);
 
-Console.Write("{");
+Console.Write("Совместив 1-ый и 2-ой массивы получаем:  {");
 PrintMas(array1);
 Console.Write(", ");
 PrintMas(array2);
