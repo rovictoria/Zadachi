@@ -36,7 +36,7 @@ void PrintArray(int[] num)
         Console.Write($"{num[position]}, ");
         position++;
     }
-    Console.Write(num[position] + " }");
+    Console.WriteLine(num[position] + " }");
 }
 
 int[] array = new int[8];
@@ -44,3 +44,49 @@ int[] array = new int[8];
 FillArray(array);
 
 PrintArray(array);
+
+// Задача на 2 массива и их слияние
+
+void FillMas(int[] massive)
+
+{
+    int Length1_mas = massive.Length;
+    
+    for(int indexx = 0; indexx < Length1_mas; indexx++)
+    {
+        Console.Write("Введите число: ");
+        int number_mas = Convert.ToInt32(Console.ReadLine());
+        massive[indexx] = number_mas;
+    }
+}
+
+void PrintMas(int[] massive2)
+{
+    int length_mas = massive2.Length;
+    int position = 0;
+   
+    while (position < (length_mas - 1))
+    {
+        Console.Write($"{massive2[position]}, ");
+        position++;
+    }
+    Console.Write(massive2[position]);
+}
+
+Console.Write("Введите длину 1 массива: ");
+int count1 = Convert.ToInt32(Console.ReadLine());
+
+int[] array1 = new int[count1];
+FillMas(array1);
+
+Console.Write("Введите длину 2 массива: ");
+int count2 = Convert.ToInt32(Console.ReadLine());
+
+int[] array2 = new int[count2];
+FillMas(array2);
+
+Console.Write("{");
+PrintMas(array1);
+Console.Write(", ");
+PrintMas(array2);
+Console.Write("}");
