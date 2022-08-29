@@ -85,8 +85,39 @@ int count2 = Convert.ToInt32(Console.ReadLine());
 int[] array2 = new int[count2];
 FillMas(array2);
 
-Console.Write("Совместив 1-ый и 2-ой массивы получаем:  {");
+Console.Write("{");
 PrintMas(array1);
 Console.Write(", ");
 PrintMas(array2);
-Console.Write("}");
+Console.WriteLine("}");
+
+
+// Как раннее прописывали
+
+Console.Write("Введите длину 1 массива: ");
+int count_number1 = Convert.ToInt32(Console.ReadLine());
+
+int[] array11 = GetArray(count_number1);
+Console.WriteLine($"[{String.Join(",", array11)}]");
+
+
+Console.Write("Введите длину 2 массива: ");
+int count_number2 = Convert.ToInt32(Console.ReadLine());
+
+int[] array22 = GetArray(count_number2);
+Console.WriteLine($"[{String.Join(",", array22)}]");
+
+Console.WriteLine($"Новый массив [{String.Join(", ", array11)}, {String.Join(", ", array22)}]");
+
+int[] GetArray(int size)
+{
+    int[] result_mas = new int[size];
+    for (int ind = 0; ind < size; ind++)
+    {
+        Console.Write("Введите число: ");
+        int res_number = Convert.ToInt32(Console.ReadLine());
+        result_mas[ind] = res_number;
+    }
+
+    return result_mas;
+}
