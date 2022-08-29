@@ -3,7 +3,31 @@
 // степень B.
 // 3, 5 -> 243 (3⁵)
 
-// Первый вариант решения задачи 
+
+// Основной вариант решения задачи 
+void Pow1()
+{
+    Console.Write("Введите А: ");
+    int A = Convert.ToInt32(Console.ReadLine());
+
+    Console.Write("Введите B: ");
+    int B = Convert.ToInt32(Console.ReadLine());
+
+    int result  = 1 ;
+    if(B != 0)
+    {
+        for(int i = 1; i <= B; i++)
+        {
+        result = result * A;
+        }
+    }
+    Console.WriteLine($"{A} в степени {B} = {result}");
+    
+}
+
+Pow1();
+
+// Второй вариант решения задачи без цикла
 double Pow2(int A, int B)
 {
    double result = Math.Pow(A,B);
@@ -14,7 +38,8 @@ double Pow2(int A, int B)
 double res = Pow2(2,5);
 Console.WriteLine($"{res}");
 
-// Второй вариант решения задачи 
+
+// Третий вариант решения задачи без цикла через void
 void Pow()
 {
     Console.Write("Введите А: ");
